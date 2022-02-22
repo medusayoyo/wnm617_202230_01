@@ -1,0 +1,79 @@
+header, .preamble, .explanation, .participation, .benefits{
+    height: 100vh;
+    vertical-align: middle
+    text-align: justify;
+}
+
+ header {
+    background-image:url(images/1.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box; 
+    vertical-align: middle
+}
+
+html { font-size: 100%; 
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
+    text-rendering: optimizelegibility; 
+    vertical-align: middle
+}
+body {
+    color:#888089;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    position:relative;
+    background:#000;
+    width:100%;
+    height:100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    vertical-align: middle
+}
+
+
+a {
+    text-decoration:none;
+    color:#fff;
+    outline:none;
+}
+img {
+    max-width:100%;
+}
+
+
+p{
+    font-size:13px;
+    line-height:27px;
+    font-weight:400;
+    padding-bottom:33px;
+    margin:0px;
+   
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:33px;
+    line-height:76px;
+    font-weight:400;
+    margin:0px;
+    padding-bottom:8px;
+    margin-left:36%;
+    margin-bottom: 100px;
+
+}
+
+
+header h2{
+
+
+}
