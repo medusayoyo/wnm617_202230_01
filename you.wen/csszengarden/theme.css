@@ -1,5 +1,4 @@
 header, .preamble, .explanation, .participation, .benefits{
-    height: 100vh;
     vertical-align: middle
     text-align: justify;
 }
@@ -8,16 +7,8 @@ header, .preamble, .explanation, .participation, .benefits{
     background-image:url(images/1.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
-
-* {
-    padding:0;
-    margin:0;
-    box-sizing: border-box; 
-    vertical-align: middle
-}
 
 html { font-size: 100%; 
     -webkit-text-size-adjust: 100%; 
@@ -25,11 +16,11 @@ html { font-size: 100%;
     text-rendering: optimizelegibility; 
     vertical-align: middle
 }
+
 body {
-    color:#888089;
+    color:#fffeff;;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    position:relative;
     background:#000;
     width:100%;
     height:100%;
@@ -43,9 +34,14 @@ body {
 
 a {
     text-decoration:none;
-    color:#fff;
+    color:#57c0ff;
     outline:none;
 }
+
+abbr{color:#57c0ff;
+
+}
+
 img {
     max-width:100%;
 }
@@ -57,23 +53,185 @@ p{
     font-weight:400;
     padding-bottom:33px;
     margin:0px;
-   
+    text-align: justify;
+    text-justify: inter-ideograph;
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size:33px;
-    line-height:76px;
-    font-weight:400;
-    margin:0px;
-    padding-bottom:8px;
-    margin-left:36%;
-    margin-bottom: 100px;
+font-family: 'Montserrat', sans-serif;
+font-size: 80px;
+line-height: 1000px;
+font-weight: 400;
+margin: 0px;
+margin-left: 0px;
+padding-bottom: 8px;
+margin-left: 36%;
 
 }
 
 
+
 header h2{
+margin: 0px;
+padding-bottom: 8px;
+margin-left: 45%;
+position: absolute;
+bottom: 5px;
 
 
+
+}
+
+
+.preamble h3{
+    font-family: 'Montserrat', sans-serif;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 1140px;
+    position: relative;
+}
+
+
+.preamble p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.summary{
+    font-family: 'Montserrat', sans-serif;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+
+}
+
+.summary p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+.explanation h3{
+    font-family: 'Montserrat', sans-serif;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 1140px;
+    position: relative;
+}
+
+.explanation p
+{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+.participation{
+    font-family: 'Montserrat', sans-serif;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+
+}
+
+
+.participation p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+
+.benefits{
+    font-family: 'Montserrat', sans-serif;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+
+}
+
+
+.benefits p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.requirements{
+    font-family: 'Montserrat', sans-serif;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+
+}
+
+
+.requirements p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+ /* button */
+
+
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+ 
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50; /* Green */
+}
+
+
+ /* footer */
+
+.footer{
+    font-family: 'Montserrat', sans-serif;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 30px;
+    position: relative;
+
+}
+
+
+.footer p{
+    font-family: 'Montserrat', sans-serif;
+    width:800px;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
