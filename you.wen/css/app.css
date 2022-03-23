@@ -21,16 +21,46 @@
    --header-height: 3rem;
 }
 
+
+
 body {
    margin: 0;
    font-size: 100%;
+   font-family: Poppins;
+}
+
+h1 {
+   font-size: 1.5em;
+   font-family: 'Poppins', sans-serif;
+ 
+
+}
+
+a {
+   color: inherit;
+   font-weight: bold;
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}
+
+
+h2 {
+   font-size: 0.8em;
    font-family: var(--font-sans);
 }
 
-h1,
-h2,
-h3,
-h4 {
+a {
+   color: inherit;
+   font-weight: bold;
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}
+
+h3,{
    font-size: 1em;
    font-family: var(--font-sans);
 }
@@ -44,6 +74,25 @@ a:hover {
    text-decoration: underline;
 }
 
+h4 {
+   font-size: 1.5em;
+   font-family: 'Poppins', sans-serif;   color:#00c7ff ;
+
+}
+
+a {
+   color: inherit;
+   font-weight: bold;
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: underline;
+}
+
+
+/* Fonts */
+
+
 
 
 /* Forms */
@@ -52,8 +101,8 @@ a:hover {
    margin: 1em 0;
 }
 .ui-mobile .form-label {
-   font-size: 0.8em;
-   color: var(--color-neutral-medium);
+   font-size: 1em;
+   color: var(--color-neutral-dark);
    margin: 0.5rem 0;
 }
 .form-input {
@@ -65,6 +114,7 @@ a:hover {
    padding: 0.5em 1em;
    margin: 0;
    outline: 0;
+   border-radius: 30px;
 }
 .form-button {
    display: inline-block;
@@ -146,7 +196,7 @@ a:hover {
    border-width: 0;
    background-color: white;
    box-shadow: 0 0 5px rgba(0,0,0,0.15);
-
+  
    position: relative;
    overflow: hidden;
 }
@@ -179,7 +229,18 @@ a:hover {
    padding: 0 1em;
 }
 
+.overscroll{
+  overflow: auto;
+}
 
+
+.img-container img{
+  max-width:60%;
+  max-height:100%;
+  margin:auto;
+  display:block;
+  padding top: 10px;
+}
 
 
 /* Modals */
@@ -294,7 +355,6 @@ a:hover {
 
 
 
-
 .map-placeholder {
    background-image: url(../img/map.jpg);
    background-position: center;
@@ -347,7 +407,7 @@ a:hover {
 
 /* foote nav */
 .nav-icon-set li.active {
-   background-color: var(--color-main-light);
+   background-color: #ooffff;
 }
 .nav-icon {
     line-height: 2rem;
@@ -384,3 +444,125 @@ a:hover {
 
 .flex-column { flex-direction:column; }
 .overscroll { overflow:auto; }
+
+
+
+
+/* Buttons */
+
+.login-button{
+  font-family: Poppins;
+  font-size: 17px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 8px;
+  margin-left: 8px;
+  border: solid 1px #00ff8f;
+  border-radius: 40px;
+  cuesor: point;
+  text-align: center;
+  background-color: #00ff8f;
+  color: white;
+  margin-left: 80px;
+}
+
+
+.signup-button{
+  font-family: Poppins;
+  font-size: 17px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 8px;
+  margin-left: 8px;
+  border: solid 1px #00ff8f;
+  border-radius: 40px;
+  cuesor: point;
+  text-align: center;
+  background-color: #00ff8f;
+  color: white;
+  margin-left: 80px;
+}
+
+.login-button:hover
+.login-button:active{
+  background-color: #1bed91
+}
+
+
+.my-profile-button{
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 8px;
+  margin-left: 8px;
+  border: solid 1px #00ffff;
+  border-radius: 40px;
+  cuesor: point;
+  text-align: center;
+  background-color: #00ffff;
+  color: white;
+  margin-left: 80px;
+}
+
+.my-alien-cats-button{
+font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 8px;
+  margin-left: 8px;
+  border: solid 1px #00c7ff;
+  border-radius: 40px;
+  cuesor: point;
+  text-align: center;
+  background-color: #00c7ff;
+  color: white;
+  margin-left: 80px;
+}
+
+.pagepadding{
+  padding:2em;
+}
+
+
+.logout{
+   color: #00c7ff;
+   font-size: 13px;
+}
+
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+.catdiscription {
+   padding: 4em 1em;
+   border-radius: 30px;
+}
+
+
+.image-container{
+   display: flex;
+   height: 300px;
+}

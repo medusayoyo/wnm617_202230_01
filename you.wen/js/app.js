@@ -45,7 +45,7 @@ $(() => {
       $(this).html($(target).html())
    });
 
-   [,"#recent-page","#list-page","#user-profile-page"].forEach((p,i)=>{
+   [,"#recent-page","#list-page","#user-profile-page",].forEach((p,i)=>{
       if(window.location.hash === p) {
          console.log($(".nav-icon-set li"))
          $(`.nav-icon-set li:nth-child(${i})`).addClass("active");
