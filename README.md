@@ -1,14 +1,6 @@
-# You.Wen
+wnm617_202230_01
 
-## Class Project Mobile Tech
+WNM 617: Mobile Tech
+YOU SHOULD NEVER EDIT THIS FILE.
 
-## Important Links
-
-
-CSS Grden
-
-http://yoyo998023.com/aau/wnm617/you.wen/csszengarden/index.html
-
-Tracking App
-
-http://yoyo998023.com/aau/wnm617/you.wen/index.html
+This one is for the main project.
