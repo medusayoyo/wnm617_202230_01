@@ -44,7 +44,7 @@
             </div>
             <!-- <input type="submit" data-role="none"> -->
             <div class="form-control">
-             <a href="#home-page"> <button type="login" class="login-button" data-role="none">Login</button></a>
+           <button type="login" class="login-button" data-role="none">Login</button>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em;">
                <p>New to the app? <a href="#signup-page">Sign Up!</a></p>
@@ -87,46 +87,14 @@
       </div>
    </section>
 
-<!--Home page-->
-
-<section data-role="page" id="home-page">
-      <header data-role="header">
-         <h1>Alien Meow</h1><ul>
-                
-                <li class="flex-stretch"><li><a href="#signin-page"><div class=logout>Logout</div></a></li></li></ul></header>
-         
-         <div data-role="main" class="overscroll">
-         <div class="form-control">
-          	<div class="img-container">
-          		<img src="img/1.png"></div></div>
-          		 <div class="form-control">
-             <a href="#user-profile-page"> <button type="login" class="my-profile-button" data-role="none">My profile</button></a>
-            </div>
-
-            <div class="img-container">
-            	<img src="img/2.png"></div></div>
-            	<div class="form-control">
-            		<a href="#list-page"> <button type="login" class="my-alien-cats-button" data-role="none">My Alien cats</button></a>
-            	</div>
-            </div>
-
-            	<footer data-role="footer" data-template="#footer-template"></footer>
-         </section>
 
 
 <!--User-profile-page-->
 
    <section data-role="page" id="user-profile-page">
       <header data-role="header">
-         <h1>My profile</h1>
-         <ul>
-                <li><a href="#home-page">Back</a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#edit-cat-page">Edit</a></li>
-            </ul>
-        </header>
-
-        <div data-role="main" class="overscroll">
+      <h1>My profile</h1></header>
+       <div data-role="main" class="overscroll">
         	<div class="form-control">
         		<div class="img-container">
         			<div class="pagepadding">
@@ -135,11 +103,14 @@
         			<h4>Name:</h4>Yoyo
         			<h4>Planet:</h4>Earth
         			<h4>Age:</h4>24
-        			<h4>Favorite Cat type：</h4><span>Hot guy cat</span><
+        			<h4>Favorite Cat type：</h4><span>Hot guy cat</span>
         			<br>
         			<div class="img-container">
         				<img src="img/hotguy.jpg">
         			</div></div></div></div></div>
+
+             <a href="#home-page"> <button type="login" class="login-button" data-role="none">Logout</button></a>
+            </div>
         			<footer data-role="footer" data-template="#footer-template"></footer>
         		</section>
 
@@ -148,10 +119,11 @@
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>Animal List</h1>
+         <h1>My Alien Cats</h1>
          <ul>
+              <li><a href="#home-page">Back</a></li>
             <li class="flex-stretch"></li>         
-                <li><a href="#home-page">Back</a></li>
+                <li><a href="#add-cat-page">Add Cat</a></li>
          </ul>
       </header>
       <div data-role="main">
@@ -241,7 +213,7 @@
 
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>My profile</h1>
+         <h1>Cat profile</h1>
          <ul>
                 <li><a href="#list-page">Back</a></li>
                 <li class="flex-stretch"></li>
@@ -258,6 +230,7 @@
                <h4>Name:</h4>Sexy Grandma Cat
                <h4>Planet:</h4>Earth
                <h4>Age:</h4>?
+               <h4>Description: </h4>In the dark night, I opened the toilet door and found...Sexy grandma cat
                <h4>Recent Location</h4>
                <div class="img-container">
                   <img src="img/map.jpg">
@@ -270,7 +243,7 @@
 
    <section data-role="page" id="edit-cat-page">
       <header data-role="header">
-         <h1>My profile</h1>
+         <h1>Edit cat page</h1>
          <ul>
                 <li><a href="#home-page">Back</a></li>
                 <li class="flex-stretch"></li>
@@ -294,9 +267,7 @@
 
         <a href="#home-page"> <button type="login" class="login-button" data-role="none">SAVE</button></a>
            
-
-
-               <footer data-role="footer" data-template="#footer-template"></footer></section>
+   <footer data-role="footer" data-template="#footer-template"></footer></section>
 
 
 
@@ -319,7 +290,7 @@
                <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type Cat Name">
             </div>
             <div class="form-control">
-               <label for="cat breed" class="form-label">Cat Breed</label>
+               <label for="cat breed" class="form-label">Cat Earth</label>
                <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type Cat Breed">
             </div>
             <div class="form-control">
@@ -332,7 +303,7 @@
                <input type="file" class="file" id="aliencatpicture" accept="image/*;capture=camera">
             </label>
             <div class="form-control">
-            <label for="catdiscription">Alien Cat Discription</label>
+            <label for="catdiscription">Alien Cat Description</label>
             <input type="password"data-role="none" class="form-input" id="catdiscription" placeholder="Alien Cat Discription ">
             </div></form>
          
@@ -393,13 +364,13 @@
 
    <script type="text/template" id="footer-template">
          <ul class="nav-icon-set">
-         <li><a href="#home-page" data-activateone=".nav-icon-set li:nth-child(1)">
+         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(1)">
             <span class="nav-icon"><img class="icon" src="img/icons/home.png"></span>
-            <span class="nav-icon-label">Home</span>
+            <span class="nav-icon-label">My Profile</span>
          </a></li>
-         <li><a href="#add-cat-page" data-activateone=".nav-icon-set li:nth-child(2)">
+         <li><a href="#list-page" data-activateone=".nav-icon-set li:nth-child(2)">
             <span class="nav-icon"><img class="icon" src="img/addcat.png"></span></span>
-            <span class="nav-icon-label">Add Cat</span>
+            <span class="nav-icon-label">My Alien Cats</span>
          </a></li>
          <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(3)">
             <span class="nav-icon"><img class="icon" src="img/icons/map.png"></span>

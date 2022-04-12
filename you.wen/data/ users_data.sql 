@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `tracker_202230_users` (
+`id` INT NULL,
+`name` VARCHAR(MAX) NULL,
+`username` VARCHAR(MAX) NULL,
+`email` VARCHAR(MAX) NULL,
+`password` VARCHAR(MAX) NULL,
+`img` VARCHAR(MAX) NULL,
+`date_create` VARCHAR(MAX) NULL
+);
+
+INSERT INTO tracker_202230_users VALUES
+(1,'Laurel Moran','user1','user1@gmail.com','md5(pass)','https://via.placeholder.com/400/937/fff/?text=user1','2022-01-30 02:46:44'),
+(2,'Snyder Harris','user2','user2@gmail.com','md5(pass)','https://via.placeholder.com/400/777/fff/?text=user2','2022-01-08 02:31:31'),
+(3,'Katheryn Atkins','user3','user3@gmail.com','md5(pass)','https://via.placeholder.com/400/721/fff/?text=user3','2022-03-29 09:45:19'),
+(4,'Tillman Peters','user4','user4@gmail.com','md5(pass)','https://via.placeholder.com/400/981/fff/?text=user4','2022-01-21 10:04:25'),
+(5,'Sheri Dickson','user5','user5@gmail.com','md5(pass)','https://via.placeholder.com/400/828/fff/?text=user5','2022-03-19 05:25:41'),
+(6,'Stevenson Guerrero','user6','user6@gmail.com','md5(pass)','https://via.placeholder.com/400/806/fff/?text=user6','2022-03-04 08:44:57'),
+(7,'Isabel Buchanan','user7','user7@gmail.com','md5(pass)','https://via.placeholder.com/400/726/fff/?text=user7','2022-03-14 02:16:14'),
+(8,'Briana Boyer','user8','user8@gmail.com','md5(pass)','https://via.placeholder.com/400/847/fff/?text=user8','2022-04-03 01:44:42'),
+(9,'Claudette Stuart','user9','user9@gmail.com','md5(pass)','https://via.placeholder.com/400/726/fff/?text=user9','2022-03-19 03:27:41'),
+(10,'Pierce Bonner','user10','user10@gmail.com','md5(pass)','https://via.placeholder.com/400/964/fff/?text=user10','2022-03-08 10:37:52');
