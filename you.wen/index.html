@@ -6,15 +6,20 @@
 	<title>Alien Meow</title>
 
 
-	
-
 	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/app.js"></script>
-	 <script src="js/signin.js"></script>
+   <script src="js/signin.js"></script>
+   <script src="js/function.js"></script>
+   <script src="js/pages.js"></script>
+   <script src="js/parts.js"></script>
+   <script src="js/maps.js"></script>
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEv-JCoh78TAGs-PQBp642H1_nfUjQLA" defer></script>
+   <!--API KEY: AIzaSyBBEv-JCoh78TAGs-PQBp642H1_nfUjQLA-->
 
 
 <style>
@@ -25,7 +30,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap');
 </style> 
 
-<!--Signin page-->
+<!--Signin-page-->
 
  <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
@@ -55,7 +60,7 @@
    </section>
 
 
- <!--sign up page-->
+ <!--Signup-page-->
 
    <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-column">
@@ -91,31 +96,95 @@
 
 <!--User-profile-page-->
 
-   <section data-role="page" id="user-profile-page">
+
+<section data-role="page" id="user-profile-page">
       <header data-role="header">
-      <h1>My profile</h1></header>
-       <div data-role="main" class="overscroll">
-        	<div class="form-control">
-        		<div class="img-container">
-        			<div class="pagepadding">
-        				<img src="img/xixi.jpg">
-        				<font style="line-height:0.1;"></font>
-        			<h4>Name:</h4>Yoyo
-        			<h4>Planet:</h4>Earth
-        			<h4>Age:</h4>24
-        			<h4>Favorite Cat type：</h4><span>Hot guy cat</span>
-        			<br>
-        			<div class="img-container">
-        				<img src="img/hotguy.jpg">
-        			</div></div></div></div></div>
-
-             <a href="#home-page"> <button type="login" class="login-button" data-role="none">Logout</button></a>
+          <h1>My profile</h1>
+       <ul>     
+                <li class="flex-stretch"></li>
+                <li><a href="#edit-profile-page">Edit</a></li>
+            </ul>
+         </header>
+         
+ <div data-role="main" class="overscroll">
+         <div class="form-control">
+            <div class="img-container">
+               <div class="pagepadding">
+                  <img src="img/uu.jpg">
+                  <font style="line-height:0.1;"></font>
+                
+            <div class="form-control">
+               <label class="form-label">Name</label>
+               <input type="" data-role="none" class="form-input" placeholder="Yoyo">
             </div>
-        			<footer data-role="footer" data-template="#footer-template"></footer>
-        		</section>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Planet</label>
+              <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
+            </div>
+             <div class="form-control">
+               <label for="signin-password" class="form-label">Age</label>
+               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="24">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Favorite Cat type</label>
+            
+        </form></div></div>
+            <div class="img-container">
+                  <img src="img/hotguy.jpg"></div>
+                    <ul> <li><a href="#signup-page">Logout</a></li></ul>
+               <footer data-role="footer" data-template="#footer-template"></footer>          
+            </section>
 
 
-<!--Animal List-->
+
+<!--Edit-profile-page-->
+
+
+ <section data-role="page" id="edit-profile-page">
+      <header data-role="header">
+          <h1>My profile</h1>
+         <ul>     
+            <li><a href="#user-profile-page">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#edit-profile-page">Edit</a></li>
+            </ul></header>
+         
+ <div data-role="main" class="overscroll">
+         <div class="form-control">
+            <div class="img-container">
+               <div class="pagepadding">
+                  <div class="img"> 
+                  </div>
+                  <font style="line-height:0.1;"></font>
+                  <form id="signin-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signin-username" class="form-label">Name</label>
+               <input type="" id="" data-role="none" class="form-input" placeholder="Your Username">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Planet</label>
+               <input type="" id="" data-role="none" class="form-input" placeholder="Your Planet">
+            </div>
+             <div class="form-control">
+               <label for="signin-password" class="form-label">Age</label>
+               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Your age">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Favorite Cat type</label>
+               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Your Favorite Cat type">
+
+               <input type="file" class="form-input" id="ignin-password" accept="image/*;capture=camera">
+            </label>
+             
+
+
+            </div></form></div></div>
+            
+               <footer data-role="footer" data-template="#footer-template"></footer>          
+            </section>
+
+
+<!--List-page-->
 
    <section data-role="page" id="list-page">
       <header data-role="header">
@@ -208,10 +277,41 @@
 
 
 
-<!--animal-profile-page-->
+<!--Animal-profile-page-->
 
 
    <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1></h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#user-edit-page">Edit</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="animal-profile-top">
+         </div>
+         <div class="animal-profile-nav">
+            <div class="active">Recent Location</div>
+            <div>Description</div>
+         </div>
+         <div class="animal-profile-bottom">
+            <div class="animal-profile-map active">
+               <div class="map map-placeholder"></div>
+            </div>
+            <div class="animal-profile-description"></div>
+         </div>
+      </div>
+        <footer data-role="footer" data-template="#footer-template"></footer>   
+   </section>
+
+
+
+ 
+
+
+   <!--<section data-role="page" id="animal-profile-page">
       <header data-role="header">
          <h1>Cat profile</h1>
          <ul>
@@ -226,26 +326,39 @@
             <div class="img-container">
                <div class="pagepadding">
                   <img src="img/sexygrandma.jpg">
-                
-               <h4>Name:</h4>Sexy Grandma Cat
-               <h4>Planet:</h4>Earth
-               <h4>Age:</h4>?
-               <h4>Description: </h4>In the dark night, I opened the toilet door and found...Sexy grandma cat
-               <h4>Recent Location</h4>
+                 <div data-role="main" class="overscroll">
+   
+                  <form id="signin-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signin-username" class="form-label">Name</label>
+               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Sexy Grandma Cat">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Planet</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
+            </div>
+             <div class="form-control">
+               <label for="signin-password" class="form-label">Age</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="?">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Description</label>
+               In the dark night, I opened the toilet door and found...Sexy grandma cat
+            </div></form></div></div>
+            <label for="signin-password" class="form-label">Recent Location</label>
                <div class="img-container">
                   <img src="img/map.jpg">
                </div></div></div></div></div>
-               <footer data-role="footer" data-template="#footer-template"></footer></section>
+               <footer data-role="footer" data-template="#footer-template"></footer></section>-->
            
 
-<!--Edit cat page-->
+<!--Edit-cat-page-->
 
-
-   <section data-role="page" id="edit-cat-page">
+ <section data-role="page" id="edit-cat-page">
       <header data-role="header">
-         <h1>Edit cat page</h1>
+         <h1>Edit Cat Profile</h1>
          <ul>
-                <li><a href="#home-page">Back</a></li>
+                <li><a href="#list-page">Back</a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#edit-cat-page">Edit</a></li>
             </ul>
@@ -255,27 +368,39 @@
          <div class="form-control">
             <div class="img-container">
                <div class="pagepadding">
-                  <img src="img/sexygrandma.jpg">
-                
-               <h4>Name:</h4>Sexy Grandma Cat
-               <h4>Planet:</h4>Earth
-               <h4>Age:</h4>?
-               <h4>Recent Location</h4>
+                  <img src="img/I.jpg">
+                 <div data-role="main" class="overscroll">
+   
+                  <form id="signin-form" class="form" data-ajax="false">
+            <div class="form-control">
+               <label for="signin-username" class="form-label">Cat Name</label>
+               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Sexy Grandma Cat">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Cat Planet</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
+            </div>
+             <div class="form-control">
+               <label for="signin-password" class="form-label">Cat Age</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="?">
+            </div>
+            <div class="form-control">
+               <label for="signin-password" class="form-label">Cat Description</label>
+               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Cat Description">
+            </div></form></div></div>
+            <label for="signin-password" class="form-label">Recent Location</label>
                <div class="img-container">
                   <img src="img/map.jpg">
                </div></div></div></div></div>
-
-        <a href="#home-page"> <button type="login" class="login-button" data-role="none">SAVE</button></a>
+               <footer data-role="footer" data-template="#footer-template"></footer></section>
            
-   <footer data-role="footer" data-template="#footer-template"></footer></section>
 
 
 
 
 
 
-
-<!--Add cat-->
+<!--Add-cat-page-->
 
 
    <section data-role="page" id="add-cat-page">
@@ -283,7 +408,7 @@
             <h1>Add a Cat</h1>
             <a href="#" data-rel="back">Cancel</a>
         </header>  
-  <div data-role="main" class="display-flex flex-column"></div>
+     <div data-role="main" class="display-flex flex-column"></div>
          <form id="signup-form" class="form" data-ajax="false">
             <div class="form-control">
                <label for="signup-username" class="form-label">Cat Name</label>
@@ -297,13 +422,13 @@
                <label for="cat-age" class="form-label">Cat Age</label>
                <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type Cat Age ">
             </div>
-             <label for="cat-age" class="form-label">Alien Cat Picture</label>
+             <label for="cat-age" class="form-label">Cat Picture</label>
          
             <label for="file" class="aliencatpicture">
                <input type="file" class="file" id="aliencatpicture" accept="image/*;capture=camera">
             </label>
             <div class="form-control">
-            <label for="catdiscription">Alien Cat Description</label>
+            <label for="catdiscription">Cat Description</label>
             <input type="password"data-role="none" class="form-input" id="catdiscription" placeholder="Alien Cat Discription ">
             </div></form>
          
@@ -319,42 +444,39 @@
 
 
             
-<!--Map-page-->
+<!--Recent-page-->
 
- <section data-role="page" id="recent-page">
-      <div data-role="main" class="map-placeholder">
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+         <div class="map"></div>
          <div class="recent-search">
             <form class="hotdog flex-stretch" data-ajax="false" id="recent-search">
                <input type="search" data-role="none" placeholder="Search">
             </form>
             <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
-               <img src="img/icons/map.png" style="vertical-align: middle;" alt="" class="icon">
+               <img src="img/icons/filter.svg" style="vertical-align: middle;" alt="" class="icon">
             </div>
-         
-         <div class="marker" style="position:absolute;top:30vh;left:20vw" data-activate="#map-drawer">
-            <img src="img/hotguy.jpg" alt="" class="icon" id="pin">
          </div>
       </div>
-
+      <footer data-role="footer" data-template="#footer-template"></footer>
 
       <div class="modal" id="map-drawer">
          <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
          <div class="modal-drawer left">
             <div class="modal-head display-flex">
-               <div class="flex-none"></div>
+               <div class="flex-none">sidebar</div>
                <div class="flex-stretch"></div>
                <div class="flex-none">
                   <a href="#" data-deactivate="#map-drawer">&times;</a>
                </div>
+               
             </div>
             <div class="modal-body">
-              Hi Baby :3
+               content!
             </div>
          </div>
       </div>
-   </div>
-      <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>    
+   </section> 
 
 
 
@@ -382,3 +504,5 @@
    
 </body>
 </html>
+
+
