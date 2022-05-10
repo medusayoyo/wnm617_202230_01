@@ -1,4 +1,3 @@
-
 <?php
 
 function makeConn() {
@@ -76,6 +75,128 @@ function makeStatement($data) {
 
 
 
+
+
+
+      case "recent_animal_locations":
+         return makeQuery($c,"SELECT *
+            FROM `tracker_202230_animals` a
+            JOIN (
+               SELECT lg.*
+               FROM `tracker_202230_locations` lg
+               WHERE lg.id = (
+                  SELECT lt.id
+                  FROM `tracker_202230_locations` lt
+                  WHERE lt.animal_id = lg.animal_id
+                  ORDER BY lt.date_create DESC
+                  LIMIT 1
+               )
+            ) l
+            ON a.id = l.animal_id
+            WHERE a.user_id = ?
+            ORDER BY l.animal_id, l.date_create DESC
+         ", $p);
+
+
+
+
+      /* INSERT */
+
+
+      case "insert_user":
+         $r = makeQuery($c,"SELECT id FROM `tracker_202230_users` WHERE `username`=? OR `email` = ?", [ $p[0], $p[1] ]);
+         if(count($r['result']))
+            return ["error"=>"Username or Email already exists"];
+
+         makeQuery($c,"INSERT INTO
+            `tracker_202230_users`
+            (`username`,`email`,`password`,`img`,`date_create`)
+            VALUES
+            (?, ?, md5(?), 'https://via.placeholder.com/400/?text=USER', NOW())
+            ", $p, false);
+         return ["id"=>$c->lastInsertId()];
+
+      case "insert_animal":
+         makeQuery($c,"INSERT INTO
+            `tracker_202230_animals`
+            (`user_id`,`name`,`type`,`breed`,`description`,`img`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, ?, 'https://via.placeholder.com/400/?text=ANIMAL', NOW())
+            ", $p, false);
+         return ["id"=>$c->lastInsertId()];
+
+      case "insert_location":
+         makeQuery($c,"INSERT INTO
+            `tracker_202230_locations`
+            (`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+            VALUES
+            (?, ?, ?, ?, 'https://via.placeholder.com/400/?text=PHOTO', 'https://via.placeholder.com/400/?text=ICON', NOW())
+            ", $p, false);
+         return ["id"=>$c->lastInsertId()];
+
+
+
+      /* UPDATE */
+
+      case "update_user":
+         $r = makeQuery($c,"UPDATE
+            `tracker_202230_users`
+            SET
+               `name` = ?,
+               `username` = ?,
+               `email` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         if(isset($r['error'])) return $r;
+         return ["result"=>"Success"];
+
+      case "update_password":
+         $r = makeQuery($c,"UPDATE
+            `tracker_202230_users`
+            SET
+               `password` = md5(?)
+            WHERE `id` = ?
+            ",$p,false);
+         if(isset($r['error'])) return $r;
+         return ["result"=>"Success"];
+
+      case "update_animal":
+         $r = makeQuery($c,"UPDATE
+            `tracker_202230_animals`
+            SET
+               `name` = ?,
+               `type` = ?,
+               `breed` = ?,
+               `description` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         if(isset($r['error'])) return $r;
+         return ["result"=>"Success"];
+
+      case "update_location":
+         $r = makeQuery($c,"UPDATE
+            `tracker_202230_locations`
+            SET
+               `description` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         if(isset($r['error'])) return $r;
+         return ["result"=>"Success"];
+
+
+
+      /* DELETE */
+
+      case "delete_animal":
+         $r = makeQuery($c,"DELETE FROM
+            `tracker_202230_animals`
+            WHERE `id` = ?
+            ",$p,false);
+         if(isset($r['error'])) return $r;
+         return ["result"=>"Success"];
+
+
+
       case "check_signin":
          return makeQuery($c, "SELECT id from `tracker_202230_users` WHERE `username` = ? AND `password` = md5(?)", $p);
 
@@ -98,3 +219,4 @@ echo json_encode(
    makeStatement($data),
    JSON_NUMERIC_CHECK
 );
+

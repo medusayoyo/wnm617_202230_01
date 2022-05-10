@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="48" viewBox="0 0 52 48">
+  <defs>
+    <clipPath id="clip-Back">
+      <rect width="52" height="48"/>
+    </clipPath>
+  </defs>
+  <g id="Back" clip-path="url(#clip-Back)">
+    <rect width="52" height="48" fill="#fff"/>
+    <path id="ic_reply_24px" d="M10,9V5L3,12l7,7V14.9c5,0,8.5,1.6,11,5.1C20,15,17,10,10,9Z" transform="translate(14 12)"/>
+  </g>
+</svg>

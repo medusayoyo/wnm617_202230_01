@@ -1,5 +1,4 @@
-
-/* CSS RESET */
+* CSS RESET */
 
 *, *::after, *::before {
    box-sizing: border-box;
@@ -9,10 +8,10 @@
    --font-sans: Helvetica, Arial, sans-serif;
    --font-serif: Cambria, Georgia, serif;
 
-   --color-neutral-lighter: #f4f4f4;
-   --color-neutral-light: #eee;
-   --color-neutral-medium: #999;
-   --color-neutral-dark: #444;
+ 
+   --color-neutral-light: #00ff8f;
+   --color-neutral-medium: #00ffff;
+   --color-neutral-dark: #00c7ff;
 
    --color-main-light: #f6bed9;
    --color-main-medium: #e0609d;
@@ -21,94 +20,86 @@
    --header-height: 3rem;
 }
 
-
-
 body {
    margin: 0;
-   font-size: 100%;
-   font-family: Poppins;
+   font-size: 18px;
+   font-family: 'Josefin Sans', sans-serif;
+   padding: 2em;
 }
 
-h1 {
-   font-size: 1.5em;
-   font-family: 'Poppins', sans-serif;
- 
 
+.pagepadding {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 48px;
 }
 
-a {
-   color: inherit;
-   font-weight: bold;
-   text-decoration: none;
+.form-padding{
+   padding: 10px;
 }
-a:hover {
-   text-decoration: underline;
-}
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+</style>
 
 
 h2 {
-   font-size: 0.8em;
-   font-family: var(--font-sans);
+   font-size: 1.5em;
 }
 
-a {
-   color: inherit;
-   font-weight: bold;
-   text-decoration: none;
-}
-a:hover {
-   text-decoration: underline;
+h1 {
+   font-size: 1.3em;
+   font-family: 'Josefin Sans', sans-serif;
 }
 
-h3,{
-   font-size: 1em;
-   font-family: var(--font-sans);
-}
 
-a {
-   color: inherit;
-   font-weight: bold;
-   text-decoration: none;
-}
-a:hover {
-   text-decoration: underline;
-}
 
+h3,
 h4 {
-   font-size: 0.8em;
-   font-family: 'Poppins', sans-serif;   color:#00c7ff ;
-
+   font-size: 1em;
+   font-family: 'Josefin Sans', sans-serif;
 }
+
+
 
 a {
    color: inherit;
    font-weight: bold;
    text-decoration: none;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 18px;
 }
 a:hover {
    text-decoration: underline;
 }
-
-
-/* Fonts */
-
 
 
 
 /* Forms */
 
+
 .form-control {
    margin: 1em 0;
 }
-.ui-mobile .form-label {
+.ui-mobile  {
    font-size: 1em;
-   color: var(--color-neutral-dark);
-   margin: 0.5rem 0;
+   color: #000;
+  
+}
+
+
+.form-label {
+  font-size: 1.2em;
+  color: #000;
+  margin: 0.8rem ;
+  padding: 10px;
+ 
 }
 
 .form-input {
    display: inline-block;
-   width: 100%;
+   width: 85%;
    border-width: 0;
    background-color: #ffffff;
    font: inherit;
@@ -117,21 +108,27 @@ a:hover {
    outline: 0;
    border-radius: 30px;
    border: 1.5px solid #00ff8f;
+   font-size:19px;
 }
 
-
-
 .form-button {
-   display: inline-block;
-   width: 100%;
-   border-width: 0;
-   background-color: var(--color-neutral-light);
-   font: inherit;
-   padding: 0.5em 1em;
-   margin: 0;
-   outline: 0;
-   text-align: center;
-   text-decoration: none;
+  
+  font-family: 'Merriweather', serif;
+  font-size: 23px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 48px;
+  margin-left: 8px;
+  border: solid 1px #00ff8f;
+  border-radius: 40px;
+  cuesor: point;
+  text-align: center;
+  background-color: #00ff8f;
+  color: white;
+  margin-left: 80px;
+  font-weight: bold;
+
 }
 .hotdog {
    background-color: white;
@@ -172,6 +169,7 @@ a:hover {
 .recent-search {
    margin: 1em;
    display: flex;
+   position: relative;
 }
 
 
@@ -199,9 +197,9 @@ a:hover {
    height: var(--header-height);
    line-height: var(--header-height);
    border-width: 0;
-   background-color: white;
-   box-shadow: 0 0 5px rgba(0,0,0,0.15);
   
+   box-shadow: 0 0 5px rgba(0,0,0,0.15);
+
    position: relative;
    overflow: hidden;
 }
@@ -213,6 +211,9 @@ a:hover {
    left: 0;
    width: 100%;
    text-align: center;
+   font-size: 22px;
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: bold;
 }
 
 
@@ -234,18 +235,7 @@ a:hover {
    padding: 0 1em;
 }
 
-.overscroll{
-  overflow: auto;
-}
 
-
-.img-container img{
-  max-width:60%;
-  max-height:100%;
-  margin:auto;
-  display:block;
-  padding top: 10px;
-}
 
 
 /* Modals */
@@ -262,7 +252,6 @@ a:hover {
 }
 .modal.active {
    opacity: 1;
-   pointer-events: initial;
 }
 .modal-back {
    position: absolute;
@@ -271,6 +260,9 @@ a:hover {
    width: 100%;
    height: 100%;
    background-color: rgba(0,0,0,0.7);
+}
+.modal.active .modal-back {
+   pointer-events: initial;
 }
 .modal-back.transparent {
    background-color: transparent;
@@ -294,6 +286,7 @@ a:hover {
 }
 .modal.active .modal-popup {
    transform: translate(-50%, -50%);
+   pointer-events: initial;
 }
 .modal-head,
 .modal-foot {
@@ -333,6 +326,7 @@ a:hover {
 
 .modal.active .modal-drawer {
    transform: translate(0);
+   pointer-events: initial;
 }
 
 
@@ -349,13 +343,16 @@ a:hover {
 .circle-button {
    border-radius: 2rem;
    line-height: 3rem;
-   font-size: 2.5em;
+   font-size: 2em;
    width: 3rem;
    height: 3rem;
    text-align: center;
-   background-color: white;
+   text-decoration-color: white;
+   background-color:#00ff8f;
    box-shadow: 0.1em 0.2em 0.4em rgba(0,0,0,0.2);
 }
+
+
 
 
 .map {
@@ -365,8 +362,6 @@ a:hover {
    width: 100%;
    height: 100%;
 }
-
-
 .map-placeholder {
    background-image: url(../img/map.jpg);
    background-position: center;
@@ -375,6 +370,7 @@ a:hover {
 .icon {
    width: 2rem;
    height: 2rem;
+   vertical-align: middle;
 }
 
 
@@ -386,7 +382,7 @@ a:hover {
    list-style-type: none;
    padding: 0;
    margin: 0;
-   padding: 0 1em;
+   padding: 1em;
    height: 100%;
    width: 100%;
    position: relative;
@@ -406,6 +402,7 @@ a:hover {
 .animal-list-image img {
    width: 6em;
    vertical-align: text-bottom;
+    border-radius: 50%;
 }
 .animal-list-body {
    padding: 1em;
@@ -413,8 +410,6 @@ a:hover {
 .animal-list-name {
    font-size: 1.3em;
 }
-
-
 
 
 
@@ -431,20 +426,28 @@ a:hover {
     background-color: rgba(255,255,255,0.1);
 }
 .animal-profile-top {
-    height: 40vh;
+    height: 35vh;
+    width:35vh;
+    position: relative;
+    border-radius: 50%;
+    margin-top: 4.8rem;
 }
 .animal-profile-bottom {
    flex: 1 1 auto;
    position: relative;
+   border-radius: 50%;
 }
 .animal-profile-nav {
    height: var(--header-height);
    line-height: var(--header-height);
    display: flex;
+   margin-bottom: 50px
 }
 .animal-profile-nav div {
    text-align: center;
    flex: 1 1 auto;
+   
+
 }
 .animal-profile-bottom>div {
    opacity: 0;
@@ -458,12 +461,14 @@ a:hover {
 }
 .animal-profile-bottom div.active {
    opacity: 1;
+   pointer-events: initial;
 }
+
 
 
 /* foote nav */
 .nav-icon-set li.active {
-   background-color: #ooffff;
+   background-color: #00ff8f;
 }
 .nav-icon {
     line-height: 2rem;
@@ -502,123 +507,20 @@ a:hover {
 .overscroll { overflow:auto; }
 
 
-
-
-/* Buttons */
-
-.login-button{
-  font-family: Poppins;
-  font-size: 17px;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  margin: 8px;
-  margin-left: 8px;
-  border: solid 1px #00ff8f;
-  border-radius: 40px;
-  cuesor: point;
-  text-align: center;
-  background-color: #00ff8f;
-  color: white;
-  margin-left: 80px;
+.fill-parent {
+   height: 100%;
+   width: 100%;
 }
+.noclick-children * { pointer-events:none; }
 
 
-.signup-button{
-  font-family: Poppins;
-  font-size: 17px;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  margin: 8px;
-  margin-left: 8px;
-  border: solid 1px #00ff8f;
-  border-radius: 40px;
-  cuesor: point;
-  text-align: center;
-  background-color: #00ff8f;
-  color: white;
-  margin-left: 80px;
-}
+/* User */
 
-.login-button:hover
-.login-button:active{
-  background-color: #1bed91
-}
+.user-img{
+    height: 35vh;
+    width:35vh;
+    border-radius: 20%;
+    padding-left:20px;
 
-
-.my-profile-button{
-  font-family: 'Poppins', sans-serif;
-  font-size: 17px;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  margin: 8px;
-  margin-left: 8px;
-  border: solid 1px #00ffff;
-  border-radius: 40px;
-  cuesor: point;
-  text-align: center;
-  background-color: #00ffff;
-  color: white;
-  margin-left: 80px;
-}
-
-.my-alien-cats-button{
-font-family: 'Poppins', sans-serif;
-  font-size: 17px;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  margin: 8px;
-  margin-left: 8px;
-  border: solid 1px #00c7ff;
-  border-radius: 40px;
-  cuesor: point;
-  text-align: center;
-  background-color: #00c7ff;
-  color: white;
-  margin-left: 80px;
-}
-
-.pagepadding{
-  padding:2em;
-}
-
-
-.logout{
-   color: #00c7ff;
-   font-size: 13px;
-}
-
-.file {
-    position: relative;
-    display: inline-block;
-    background: #D0EEFF;
-    border: 1px solid #99D3F5;
-    border-radius: 4px;
-    padding: 4px 12px;
-    overflow: hidden;
-    color: #1E88C7;
-    text-decoration: none;
-    text-indent: 0;
-    line-height: 20px;
-}
-
-.file:hover {
-    background: #AADFFD;
-    border-color: #78C3F3;
-    color: #004974;
-    text-decoration: none;
-}
-
-.catdiscription {
-   padding: 4em 1em;
-   border-radius: 30px;
-}
-
-
-.image-container{
-   display: flex;
-   height: 300px;
+   
 }

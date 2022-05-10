@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Alien Meow</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Alien Meow</title>
 
+   <base href="/aau/wnm617/you.wen/">
 
-	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-	<link rel="stylesheet" href="css/app.css">
+   <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+   <link rel="stylesheet" href="css/app.css">
 
-	<script src="lib/js/jquery-2.2.4.min.js"></script>
-	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="js/app.js"></script>
+   <script src="lib/js/jquery-2.2.4.min.js"></script>
+
+   <script src="js/app.js"></script>
    <script src="js/signin.js"></script>
-   <script src="js/function.js"></script>
+   <script src="js/functions.js"></script>
    <script src="js/pages.js"></script>
    <script src="js/parts.js"></script>
+   <script src="js/forms.js"></script>
    <script src="js/maps.js"></script>
 
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEv-JCoh78TAGs-PQBp642H1_nfUjQLA" defer></script>
+   <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBEv-JCoh78TAGs-PQBp642H1_nfUjQLA" defer>
+   </script>
    <!--API KEY: AIzaSyBBEv-JCoh78TAGs-PQBp642H1_nfUjQLA-->
+</head>
+<body>
+
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 </style>
 
- <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap');
-</style> 
 
-<!--Signin-page-->
+
+
+
+
 
  <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-column">
@@ -49,7 +56,7 @@
             </div>
             <!-- <input type="submit" data-role="none"> -->
             <div class="form-control">
-           <button type="login" class="login-button" data-role="none">Login</button>
+           <button type="login" class="form-button" data-role="none">Login</button>
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em;">
                <p>New to the app? <a href="#signup-page">Sign Up!</a></p>
@@ -58,9 +65,6 @@
          </form>
       </div>
    </section>
-
-
- <!--Signup-page-->
 
    <section data-role="page" id="signup-page">
       <div data-role="main" class="display-flex flex-column">
@@ -71,6 +75,10 @@
                <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type your Username">
             </div>
             <div class="form-control">
+               <label for="signup-email" class="form-label">Email</label>
+               <input type="email" id="signup-email" data-role="none" class="form-input" placeholder="Type your Email">
+            </div>
+            <div class="form-control">
                <label for="signup-password" class="form-label">Password</label>
                <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type your Password">
             </div>
@@ -78,14 +86,13 @@
                <label for="signup-password2" class="form-label">Confirm Password</label>
                <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type your Password again">
             </div>
-
             <!-- <input type="submit" data-role="none"> -->
             <div class="form-control">
-               <!-- <button type="button" class="form-button">Submit</button> -->
-               <a href="#home-page" class="signup-button">Sign up</a>
+               <button type="submit" class="form-button" data-role="none">Sign Up</button>
+               <!-- <a href="#recent-page" class="form-button">Sign Up</a> -->
             </div>
             <div class="form-control" style="text-align:center;font-size:0.8em;">
-               <p>Back to <a href="#signin-page">Sign In!</a></p>
+               <p>Already have an account? <a href="#signin-page">Sign In!</a></p>
             </div>
          </form>
          <div class="flex-stretch"></div>
@@ -94,357 +101,18 @@
 
 
 
-<!--User-profile-page-->
-
-
-<section data-role="page" id="user-profile-page">
-      <header data-role="header">
-          <h1>My profile</h1>
-       <ul>     
-                <li class="flex-stretch"></li>
-                <li><a href="#edit-profile-page">Edit</a></li>
-            </ul>
-         </header>
-         
- <div data-role="main" class="overscroll">
-         <div class="form-control">
-            <div class="img-container">
-               <div class="pagepadding">
-                  <img src="img/uu.jpg">
-                  <font style="line-height:0.1;"></font>
-                
-            <div class="form-control">
-               <label class="form-label">Name</label>
-               <input type="" data-role="none" class="form-input" placeholder="Yoyo">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Planet</label>
-              <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
-            </div>
-             <div class="form-control">
-               <label for="signin-password" class="form-label">Age</label>
-               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="24">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Favorite Cat type</label>
-            
-        </form></div></div>
-            <div class="img-container">
-                  <img src="img/hotguy.jpg"></div>
-                    <ul> <li><a href="#signup-page">Logout</a></li></ul>
-               <footer data-role="footer" data-template="#footer-template"></footer>          
-            </section>
-
-
-
-<!--Edit-profile-page-->
-
-
- <section data-role="page" id="edit-profile-page">
-      <header data-role="header">
-          <h1>My profile</h1>
-         <ul>     
-            <li><a href="#user-profile-page">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#edit-profile-page">Edit</a></li>
-            </ul></header>
-         
- <div data-role="main" class="overscroll">
-         <div class="form-control">
-            <div class="img-container">
-               <div class="pagepadding">
-                  <div class="img"> 
-                  </div>
-                  <font style="line-height:0.1;"></font>
-                  <form id="signin-form" class="form" data-ajax="false">
-            <div class="form-control">
-               <label for="signin-username" class="form-label">Name</label>
-               <input type="" id="" data-role="none" class="form-input" placeholder="Your Username">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Planet</label>
-               <input type="" id="" data-role="none" class="form-input" placeholder="Your Planet">
-            </div>
-             <div class="form-control">
-               <label for="signin-password" class="form-label">Age</label>
-               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Your age">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Favorite Cat type</label>
-               <input type="" id="signin-password" data-role="none" class="form-input" placeholder="Your Favorite Cat type">
-
-               <input type="file" class="form-input" id="ignin-password" accept="image/*;capture=camera">
-            </label>
-             
-
-
-            </div></form></div></div>
-            
-               <footer data-role="footer" data-template="#footer-template"></footer>          
-            </section>
-
-
-<!--List-page-->
-
-   <section data-role="page" id="list-page">
-      <header data-role="header">
-         <h1>My Alien Cats</h1>
-         <ul>
-              <li><a href="#home-page">Back</a></li>
-            <li class="flex-stretch"></li>         
-                <li><a href="#add-cat-page">Add Cat</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         <ul class="animal-list">
-            <!-- li.animal-list-item*10>a[href=#animal-profile-page]>(div.animal-list-image>img[src='https://via.placeholder.com/400x400/?text=Animal$'])+div.animal-list-body>(div.animal-list-name>{Animal $})+(div.animal-list-type>{Type})+(div.animal-list-breed>{Breed}) -->
-            
-       
-         <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/bigeyes.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">Huge eyes cat</div>
-                        <div class="animal-list-name">Peach</div>
-                     </div>
-                   </a>
-                 </li>
-
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/sexygrandma.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">Sexy</div>
-                        <div class="animal-list-name">Sexy Grandma Cat</div>
-                     </div>
-                   </a>
-                 </li>
-           
-           <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/pusheen.gif" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">Ramen cat</div>
-                        <div class="animal-list-name">Pusheen</div>
-                     </div>
-                   </a>
-                 </li>
-              
-               <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/hotguy.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">Hot Guy Cat</div>
-                        <div class="animal-list-name">Hot guy</div>
-                     </div>
-                   </a>
-                 </li>
-              
-               <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/peepingcat.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">?</div>
-                        <div class="animal-list-name">Peeping Cat</div>
-                     </div>
-                   </a>
-                 </li>
-            
-            <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/ahacat.gif" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">?</div>
-                        <div class="animal-list-name">Aaaa Cat</div>
-                     </div>
-                   </a>
-                 </li>
-            
-             <li class="animal-list-item">
-               <a href="#animal-profile-page">
-                  <div class="animal-list-image"><img src="img/throwupcat.jpg" alt=""></div>
-                  <div class="animal-list-body">
-                     <div class="animal-list-type">?</div>
-                        <div class="animal-list-name">Throw up Cat</div>
-                     </div>
-                   </a>
-                 </li>
-          </ul>
-      </div>
-     <footer data-role="footer" data-template="#footer-template"></footer>
-   </section>
-
-
-
-<!--Animal-profile-page-->
-
-
-   <section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1></h1>
-         <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
-            <li class="flex-stretch"></li>
-            <li><a href="#user-edit-page">Edit</a></li>
-         </ul>
-      </header>
-      <div data-role="main">
-         <div class="animal-profile-top">
-         </div>
-         <div class="animal-profile-nav">
-            <div class="active">Recent Location</div>
-            <div>Description</div>
-         </div>
-         <div class="animal-profile-bottom">
-            <div class="animal-profile-map active">
-               <div class="map map-placeholder"></div>
-            </div>
-            <div class="animal-profile-description"></div>
-         </div>
-      </div>
-        <footer data-role="footer" data-template="#footer-template"></footer>   
-   </section>
-
-
-
- 
-
-
-   <!--<section data-role="page" id="animal-profile-page">
-      <header data-role="header">
-         <h1>Cat profile</h1>
-         <ul>
-                <li><a href="#list-page">Back</a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#edit-cat-page">Edit</a></li>
-            </ul>
-        </header>
-
-        <div data-role="main" class="overscroll">
-         <div class="form-control">
-            <div class="img-container">
-               <div class="pagepadding">
-                  <img src="img/sexygrandma.jpg">
-                 <div data-role="main" class="overscroll">
-   
-                  <form id="signin-form" class="form" data-ajax="false">
-            <div class="form-control">
-               <label for="signin-username" class="form-label">Name</label>
-               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Sexy Grandma Cat">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Planet</label>
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
-            </div>
-             <div class="form-control">
-               <label for="signin-password" class="form-label">Age</label>
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="?">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Description</label>
-               In the dark night, I opened the toilet door and found...Sexy grandma cat
-            </div></form></div></div>
-            <label for="signin-password" class="form-label">Recent Location</label>
-               <div class="img-container">
-                  <img src="img/map.jpg">
-               </div></div></div></div></div>
-               <footer data-role="footer" data-template="#footer-template"></footer></section>-->
-           
-
-<!--Edit-cat-page-->
-
- <section data-role="page" id="edit-cat-page">
-      <header data-role="header">
-         <h1>Edit Cat Profile</h1>
-         <ul>
-                <li><a href="#list-page">Back</a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#edit-cat-page">Edit</a></li>
-            </ul>
-        </header>
-
-        <div data-role="main" class="overscroll">
-         <div class="form-control">
-            <div class="img-container">
-               <div class="pagepadding">
-                  <img src="img/I.jpg">
-                 <div data-role="main" class="overscroll">
-   
-                  <form id="signin-form" class="form" data-ajax="false">
-            <div class="form-control">
-               <label for="signin-username" class="form-label">Cat Name</label>
-               <input type="text" id="signin-username" data-role="none" class="form-input" placeholder="Sexy Grandma Cat">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Cat Planet</label>
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Earth">
-            </div>
-             <div class="form-control">
-               <label for="signin-password" class="form-label">Cat Age</label>
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="?">
-            </div>
-            <div class="form-control">
-               <label for="signin-password" class="form-label">Cat Description</label>
-               <input type="password" id="signin-password" data-role="none" class="form-input" placeholder="Cat Description">
-            </div></form></div></div>
-            <label for="signin-password" class="form-label">Recent Location</label>
-               <div class="img-container">
-                  <img src="img/map.jpg">
-               </div></div></div></div></div>
-               <footer data-role="footer" data-template="#footer-template"></footer></section>
-           
 
 
 
 
 
 
-<!--Add-cat-page-->
-
-
-   <section data-role="page" id="add-cat-page">
-        <header data-role="header">
-            <h1>Add a Cat</h1>
-            <a href="#" data-rel="back">Cancel</a>
-        </header>  
-     <div data-role="main" class="display-flex flex-column"></div>
-         <form id="signup-form" class="form" data-ajax="false">
-            <div class="form-control">
-               <label for="signup-username" class="form-label">Cat Name</label>
-               <input type="text" id="signup-username" data-role="none" class="form-input" placeholder="Type Cat Name">
-            </div>
-            <div class="form-control">
-               <label for="cat breed" class="form-label">Cat Earth</label>
-               <input type="password" id="signup-password" data-role="none" class="form-input" placeholder="Type Cat Breed">
-            </div>
-            <div class="form-control">
-               <label for="cat-age" class="form-label">Cat Age</label>
-               <input type="password" id="signup-password2" data-role="none" class="form-input" placeholder="Type Cat Age ">
-            </div>
-             <label for="cat-age" class="form-label">Cat Picture</label>
-         
-            <label for="file" class="aliencatpicture">
-               <input type="file" class="file" id="aliencatpicture" accept="image/*;capture=camera">
-            </label>
-            <div class="form-control">
-            <label for="catdiscription">Cat Description</label>
-            <input type="password"data-role="none" class="form-input" id="catdiscription" placeholder="Alien Cat Discription ">
-            </div></form>
-         
-             <a href="#home-page"> <button type="login" class="login-button" data-role="none">SAVE</button></a>
-            </div>
-
-
-        <footer data-role="footer" data-template="#footer-template"></footer>
-    </section>
 
 
 
 
 
-            
-<!--Recent-page-->
+
 
    <section data-role="page" id="recent-page">
       <div data-role="main">
@@ -454,55 +122,261 @@
                <input type="search" data-role="none" placeholder="Search">
             </form>
             <div class="flex-none" style="line-height:3rem;padding:0 0.5em">
-               <img src="img/icons/filter.svg" style="vertical-align: middle;" alt="" class="icon">
+               <img src="img/filter.svg" style="vertical-align: middle;" alt="" class="icon">
             </div>
          </div>
+         <a href="#choose-animal-page" class="floater bottom right circle-button">&plus;</a>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
 
       <div class="modal" id="map-drawer">
          <div class="modal-back transparent passthrough" data-deactivate="#map-drawer"></div>
-         <div class="modal-drawer left">
-            <div class="modal-head display-flex">
-               <div class="flex-none">sidebar</div>
-               <div class="flex-stretch"></div>
-               <div class="flex-none">
-                  <a href="#" data-deactivate="#map-drawer">&times;</a>
-               </div>
-               
-            </div>
-            <div class="modal-body">
-               content!
-            </div>
+         <div class="modal-drawer top">
+            <div class="modal-body"></div>
          </div>
       </div>
-   </section> 
+   </section>
 
 
 
 
-<!--Footer-->
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h2>Animal List</h2>
+         <ul>
+            <li class="flex-stretch"></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul class="animal-list"></ul>
+
+         <a href="#animal-add-page" class="floater bottom right circle-button">&plus;</a>
+      </div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1></h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#animal-edit-page">Edit</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <div class="animal-profile-top">
+            <a href="#" class="floater bottom right js-animal-delete noclick-children"><img src="img/trash.svg" class="icon"></a>
+         </div>
+         <div class="animal-profile-nav">
+            <div class="active"><h2>Recent Location<h2></div>
+               <div><h2>Cat Info<h2></div>
+               </div>
+         <div class="animal-profile-bottom">
+            <div class="animal-profile-map active">
+               <div class="map map-placeholder"></div>
+               <a href="#choose-location-page" class="floater bottom right circle-button js-location-choose-animal">&plus;</a>
+            </div>
+            <div class="animal-profile-description"></div>
+         </div>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="animal-add-page">
+      <header data-role="header">
+         <h1>New Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="animal-add-form" class="overscroll" data-ajax="false" style="padding:1em"></form>
+      </div>
+   </section>
+
+
+   <section data-role="page" id="animal-edit-page">
+      <header data-role="header">
+         <h1>Edit Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-edit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="animal-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+         </form>
+      </div>
+   </section>
+
+
+
+
+
+
+
+   <section data-role="page" id="choose-animal-page">
+      <header data-role="header">
+         <h1>Choose Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-animal">
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-location-page">
+      <header data-role="header">
+         <h1>Choose Location</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page">Next</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="location-lat">
+         <input type="hidden" id="location-lng">
+         <div class="map"></div>
+      </div>
+   </section>
+
+   <section data-role="page" id="choose-description-page">
+      <header data-role="header">
+         <h1>Describe The Animal</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-location-add">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main" style="padding:1em">
+         <textarea id="location-description" class="form-input" data-role="none"></textarea>
+      </div>
+   </section>
+
+
+
+
+
+
+   <section data-role="page" id="user-profile-page">
+         <header data-role="header">
+     <h1>My profile</h1>
+     <ul> 
+     <li><a href="#recent-page">Back</a></li>    
+        <li class="flex-stretch"></li>
+        <li><a href="#user-settings-page">Setting</a></li>
+     </ul>
+  </header>
+  
+      <div data-role="main"></div>
+      <footer data-role="footer" data-template="#footer-template"></footer>
+   </section>
+
+   <section data-role="page" id="user-settings-page">
+      <header data-role="header">
+         <h1>User Settings</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <ul>
+            <li><a href="#user-edit-page">Edit User</a></li>
+            <li><a href="#user-password-page">Edit Password</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+   </section>
+
+   <section data-role="page" id="user-edit-page">
+      <header data-role="header">
+         <h1>Edit User</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-edit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
+         </form>
+      </div>
+   </section>
+
+   <section data-role="page" id="user-password-page">
+      <header data-role="header">
+         <h1>Edit User Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">
+            <div>
+               <div class="form-control">
+                  <label for="user-password-new" class="form-label">New Password</label>
+                  <input class="form-input" type="password" id="user-password-new" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="user-password-repeat" class="form-label">Repeat Password</label>
+                  <input class="form-input" type="password" id="user-password-repeat" data-role="none">
+               </div>
+            </div>
+            <div class="flex-stretch"></div>
+            <div>
+               <button class="form-button" type="submit">Submit</button>
+            </div>
+         </form>
+      </div>
+   </section>
+
+
+
+
+
+
+
 
 
    <script type="text/template" id="footer-template">
-         <ul class="nav-icon-set">
-         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(1)">
-            <span class="nav-icon"><img class="icon" src="img/icons/home.png"></span>
-            <span class="nav-icon-label">My Profile</span>
+      <ul class="nav-icon-set">
+         <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(1)">
+            <span class="nav-icon"><img class="icon" src="img/map.svg"></span>
+            <span class="nav-icon-label">Recent</span>
          </a></li>
          <li><a href="#list-page" data-activateone=".nav-icon-set li:nth-child(2)">
-            <span class="nav-icon"><img class="icon" src="img/addcat.png"></span></span>
-            <span class="nav-icon-label">My Alien Cats</span>
+            <span class="nav-icon"><img class="icon" src="img/list.svg"></span>
+            <span class="nav-icon-label">List</span>
          </a></li>
-         <li><a href="#recent-page" data-activateone=".nav-icon-set li:nth-child(3)">
-            <span class="nav-icon"><img class="icon" src="img/icons/map.png"></span>
-            <span class="nav-icon-label">Map</span>
-         </a></li>  
+         <li><a href="#user-profile-page" data-activateone=".nav-icon-set li:nth-child(3)">
+            <span class="nav-icon"><img class="icon" src="img/profile.svg"></span>
+            <span class="nav-icon-label">Profile</span>
+         </a></li>
       </ul>
-    
    </script>
    
 </body>
 </html>
-
-
