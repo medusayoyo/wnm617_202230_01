@@ -141,26 +141,22 @@
 
 
    <section data-role="page" id="list-page">
-      <header data-role="header">
-         <h2>Animal List</h2>
-         <ul>
-            <li class="flex-stretch"></li>
-         </ul>
-      </header>
+      
       <div data-role="main">
+          <div class="search-bar header flex-none">
+            <form data-ajax="false" id="list-search-form" class="hotdog dark">
+               <input type="search" data-role="none" placeholder="Search For An Animal">
+            </form>
+         </div>
+         <div class="filter-bar header flex-none">
+         </div>
+
          <ul class="animal-list"></ul>
 
          <a href="#animal-add-page" class="floater bottom right circle-button">&plus;</a>
       </div>
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
-
-
-
-
-
-
-
 
 
 
@@ -180,6 +176,7 @@
       <div data-role="main">
          <div class="animal-profile-top">
             <a href="#" class="floater bottom right js-animal-delete noclick-children"><img src="img/trash.svg" class="icon"></a>
+            <a href="#animal-edit-photo-page" class="floater bottom left"><img src="img/pencil.svg" class="icon"></a>
          </div>
          <div class="animal-profile-nav">
             <div class="active"><h2>Recent Location<h2></div>
@@ -228,7 +225,22 @@
 
 
 
-
+<section data-role="page" id="animal-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-animal-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="animal-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="animal-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
 
 
 
@@ -336,6 +348,7 @@
       <div data-role="main">
          <form id="user-password-form" class="overscroll fill-parent display-flex flex-column" data-ajax="false" style="padding:1em">
             <div>
+               <div class="pagepadding">
                <div class="form-control">
                   <label for="user-password-new" class="form-label">New Password</label>
                   <input class="form-input" type="password" id="user-password-new" data-role="none">
@@ -343,13 +356,11 @@
                <div class="form-control">
                   <label for="user-password-repeat" class="form-label">Repeat Password</label>
                   <input class="form-input" type="password" id="user-password-repeat" data-role="none">
+                    <button class="form-button" type="submit">Submit</button>
+                    </form>
                </div>
             </div>
-            <div class="flex-stretch"></div>
-            <div>
-               <button class="form-button" type="submit">Submit</button>
-            </div>
-         </form>
+         </div>
       </div>
    </section>
 
@@ -357,7 +368,22 @@
 
 
 
-
+<section data-role="page" id="user-edit-photo-page">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-upload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="user-edit-photo-image">
+         <label class="imagepicker replace">
+            <input type='file' id="user-edit-photo-input" data-role="none">
+         </label>
+      </div>
+   </section>
 
 
 

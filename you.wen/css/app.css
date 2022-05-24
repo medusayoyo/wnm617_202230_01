@@ -130,6 +130,11 @@ a:hover {
   font-weight: bold;
 
 }
+
+
+
+
+
 .hotdog {
    background-color: white;
    border-radius: 2em;
@@ -146,9 +151,10 @@ a:hover {
    font: inherit;
    color: inherit;
    outline: 0;
+   background-color: transparent;
 }
 .hotdog.dark {
-   background-color: var(--color-neutral-dark);
+   background-color: var(--color-neutral-light);
    color: white;
 }
 
@@ -173,6 +179,31 @@ a:hover {
 }
 
 
+.search-bar {
+   z-index: 2;
+   padding: 1em 1.5em;
+   display: flex;
+}
+.search-bar.header {
+   box-shadow:none;
+}
+.search-bar .hotdog {
+   width: 100%;
+   color: black;
+}
+.filter-bar {
+   z-index: 1;
+   display: flex;
+   padding: 0 1em;
+   gap: 1em;
+   font-weight: bold;
+   width: 100%;
+}
+.filter-bar.header {
+   overflow: auto;
+}
+
+
 
 /* Page Layouts */
 
@@ -191,18 +222,21 @@ a:hover {
    overflow: hidden;
    position: relative;
 }
+
 .ui-header,
-.ui-footer {
+.ui-footer,
+.header {
    flex: none;
    height: var(--header-height);
    line-height: var(--header-height);
    border-width: 0;
-  
+   background-color: white;
    box-shadow: 0 0 5px rgba(0,0,0,0.15);
 
    position: relative;
    overflow: hidden;
 }
+
 .ui-header .ui-title {
    margin: 0;
    padding: 0;
@@ -376,6 +410,44 @@ a:hover {
 
 
 
+/* User Profile */
+
+.user-profile-head {
+   position: relative;
+}
+.user-profile-head>img {
+   width: 100%;
+   height: 40vh;
+   object-fit: cover;
+   object-position: center;
+}
+.user-profile-body {
+   padding: 1em;
+}
+
+
+
+
+
+/* Image Picker */
+.imagepicker.replace {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-position: center;
+   background-size: contain;
+   background-repeat:  no-repeat;
+}
+.imagepicker.replace input {
+   display: none;
+}
+
+
+
+
+
 
 /* Animal List */
 .animal-list {
@@ -431,6 +503,8 @@ a:hover {
     position: relative;
     border-radius: 50%;
     margin-top: 4.8rem;
+    background-size: cover;
+    background-position: center;
 }
 .animal-profile-bottom {
    flex: 1 1 auto;
@@ -522,5 +596,12 @@ a:hover {
     border-radius: 20%;
     padding-left:20px;
 
+}
+
+
+.user-profile-head {
    
+    border-radius: 50%;
+    
+
 }
