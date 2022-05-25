@@ -103,17 +103,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
    <section data-role="page" id="recent-page">
       <div data-role="main">
          <div class="map"></div>
@@ -253,10 +242,16 @@
             <li><a href="#choose-location-page">Next</a></li>
          </ul>
       </header>
+     
       <div data-role="main">
          <input type="hidden" id="location-animal">
+         <a href="#animal-add-page"><button type="edit" class="form-button" data-role="none">Add New Animal</button></a>
+         <a href="#list-page"><button type="edit" class="form-button" data-role="none">Add Existing Animal</button></a>
       </div>
    </section>
+
+
+
 
    <section data-role="page" id="choose-location-page">
       <header data-role="header">
@@ -329,12 +324,12 @@
          <ul>
             <li><a href="#" data-rel="back">Back</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#" class="js-submit-user-edit">Save</a></li>
          </ul>
       </header>
       <div data-role="main">
          <form id="user-edit-form" class="overscroll" data-ajax="false" style="padding:1em">
          </form>
+         <a href="#js-submit-user-edit"><button type="edit" class="form-button" data-role="none">Save</button></a>
       </div>
    </section>
 

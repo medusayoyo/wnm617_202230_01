@@ -15,7 +15,7 @@
 
    --color-main-light: #f6bed9;
    --color-main-medium: #e0609d;
-   --color-main-dark: #65163c;
+   --color-main-dark: #00ff8f;
 
    --header-height: 3rem;
 }
@@ -112,26 +112,64 @@ a:hover {
 }
 
 .form-button {
-  
-  font-family: 'Merriweather', serif;
-  font-size: 23px;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
-  margin: 48px;
-  margin-left: 8px;
-  border: solid 1px #00ff8f;
-  border-radius: 40px;
-  cuesor: point;
-  text-align: center;
+  align-items: center;
   background-color: #00ff8f;
-  color: white;
-  margin-left: 80px;
-  font-weight: bold;
-
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top:60px ;
+  margin-left:100px ;
 }
 
+.form-button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
 
+.form-button:hover:after {
+  transform: translate(0, 0);
+}
+
+.form-button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.form-button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
 
 
 
@@ -140,10 +178,13 @@ a:hover {
    border-radius: 2em;
    line-height: 3rem;
    padding: 0 2em;
+
 }
+
+
 .hotdog input {
    border-width: 0;
-   padding: 0;
+   padding: 00px;
    margin: 0;
    width: 100%;
    flex: 1 1 auto;
@@ -181,7 +222,7 @@ a:hover {
 
 .search-bar {
    z-index: 2;
-   padding: 1em 1.5em;
+   padding: 2em;
    display: flex;
 }
 .search-bar.header {
